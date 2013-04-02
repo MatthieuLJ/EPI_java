@@ -2,11 +2,12 @@ package com.matthieu.epi;
 
 import java.io.Console;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class Portal {
     static HashMap<String, Class<? extends Solution>> problems;
     static {
-        problems = new HashMap<String, Class<? extends Solution>>();
+        problems = new LinkedHashMap<String, Class<? extends Solution>>();
         problems.put("2.1", ComputingParity.class );
         problems.put("2.2", SwapBits.class );
         problems.put("2.3", BitReversal.class );
@@ -28,7 +29,7 @@ public class Portal {
 
         if (console != null) {
             while(true) {
-                String input = console.readLine("Enter problem to solve:");
+                String input = console.readLine("Enter problem to solve (q to quit):");
                 if (problems.containsKey(input)) {
                     solve(input);
                 } else {
