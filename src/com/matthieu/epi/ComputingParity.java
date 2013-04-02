@@ -49,11 +49,7 @@ public class ComputingParity implements Solution {
 
     @Override
     public void solve_problem() {
-        final int num_tests=5;
-
-        for (int i=0; i<num_tests; i++) {
-            long new_test = (long) (Math.random() * Long.MAX_VALUE) / 2;
-            System.out.println("Parity for "+new_test+" is "+parity1(new_test)+" or "+parity2(new_test)+" or "+parity3(new_test));
-        }
+        long new_test = (long) (Math.random() * Long.MAX_VALUE);
+        System.out.println("Parity for "+new_test+" is "+parity1(new_test)+" or "+parity2(new_test)+" or "+parity3(new_test));
     }
 }

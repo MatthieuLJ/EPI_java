@@ -7,7 +7,8 @@ public class Portal {
     static HashMap<String, Class<? extends Solution>> problems;
     static {
         problems = new HashMap<String, Class<? extends Solution>>();
-        problems.put("2.1", com.matthieu.epi.ComputingParity.class );
+        problems.put("2.1", ComputingParity.class );
+        problems.put("2.2", SwapBits.class );
     }
 
     private static void solve_problem(String id) {
