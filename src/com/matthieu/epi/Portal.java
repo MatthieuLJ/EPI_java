@@ -25,13 +25,17 @@ public class Portal {
         Console console = System.console();
 
         if (console != null) {
-            String input = console.readLine("Enter problem to solve:");
-            if (problems.containsKey(input)) {
-                solve_problem(input);
-            } else {
-                System.out.println("Cannot find that problem.");
-                System.out.println("The problems I know of are:");
-                System.out.println(problems.keySet().toString());
+            while(true) {
+                String input = console.readLine("Enter problem to solve:");
+                if (problems.containsKey(input)) {
+                    solve_problem(input);
+                } else {
+                    if (input.equals("q"))
+                        System.exit(0);
+                    System.out.println("Cannot find that problem.");
+                    System.out.println("The problems I know of are:");
+                    System.out.println(problems.keySet().toString());
+                }
             }
         }
         else {
