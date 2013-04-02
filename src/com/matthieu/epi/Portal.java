@@ -12,6 +12,7 @@ public class Portal {
         problems.put("2.2", SwapBits.class );
         problems.put("2.3", BitReversal.class );
         problems.put("2.4", ClosestSameWeight.class );
+        problems.put("2.5", PowerSet.class );
     }
 
     private static void solve(String id) {
