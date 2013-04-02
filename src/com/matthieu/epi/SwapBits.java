@@ -2,7 +2,7 @@ package com.matthieu.epi;
 
 public class SwapBits implements Solution {
 
-    private long swap(long input, int index1, int index2) {
+    public static long swap(long input, int index1, int index2) {
         if (((input >> index1)&0x1) != ((input >> index2)&0x1)) {
             input ^= (1L << index1) | (1L << index2);
         }
