@@ -11,10 +11,10 @@ public class Portal {
         problems.put("2.2", SwapBits.class );
     }
 
-    private static void solve_problem(String id) {
+    private static void solve(String id) {
         try {
             Solution solution = problems.get(id).newInstance();
-            solution.solve_problem();
+            solution.solveProblem();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -29,7 +29,7 @@ public class Portal {
             while(true) {
                 String input = console.readLine("Enter problem to solve:");
                 if (problems.containsKey(input)) {
-                    solve_problem(input);
+                    solve(input);
                 } else {
                     if (input.equals("q"))
                         System.exit(0);
@@ -42,7 +42,7 @@ public class Portal {
         else {
             for (String problem : problems.keySet()) {
                 System.out.println("### Problem "+problem);
-                solve_problem(problem);
+                solve(problem);
             }
         }
     }
