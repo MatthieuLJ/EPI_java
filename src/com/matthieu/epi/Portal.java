@@ -9,6 +9,7 @@ public class Portal {
         problems = new HashMap<String, Class<? extends Solution>>();
         problems.put("2.1", ComputingParity.class );
         problems.put("2.2", SwapBits.class );
+        problems.put("2.3", BitReversal.class );
     }
 
     private static void solve(String id) {

@@ -16,7 +16,6 @@ public class SwapBits implements Solution {
         int j = (int) (Math.random() * 64);
 
         System.out.println("Swapping bits "+i+" and "+j+" of "+Long.toHexString(number)+" gives "+Long.toHexString(swap(number, i, j)));
-
-
+        System.out.println(Long.toBinaryString(number)+" becomes "+Long.toBinaryString(swap(number, i, j)));
     }
 }
