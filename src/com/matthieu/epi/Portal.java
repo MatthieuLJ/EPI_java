@@ -14,6 +14,7 @@ public class Portal {
         problems.put("2.4", ClosestSameWeight.class );
         problems.put("2.5", PowerSet.class );
         problems.put("2.5.1", SubsetsOfSizeK.class );
+        problems.put("2.6", StringIntegerConversions.class );
     }
 
     private static void solve(String id) {
