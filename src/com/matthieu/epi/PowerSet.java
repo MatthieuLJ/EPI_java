@@ -21,6 +21,7 @@ public class PowerSet implements Solution {
             if (i<(1L << (size))-1)
                 System.out.print(", ");
         }
+        System.out.println();
     }
 
     @Override
