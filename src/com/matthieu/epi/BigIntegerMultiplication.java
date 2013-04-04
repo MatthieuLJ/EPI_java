@@ -50,7 +50,7 @@ public class BigIntegerMultiplication implements Solution {
 
         return res;
     }
-    
+
     @Override
     public void solveProblem() {
         int mul_a = (int) (Math.random()* 10000);
