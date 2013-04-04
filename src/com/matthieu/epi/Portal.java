@@ -21,6 +21,7 @@ public class Portal {
         problems.put("3.14", SudokuChecker.class );
         problems.put("3.22", PhoneNumberMnemonic.class );
         problems.put("4.1", MergeSortedLinkedList.class );
+        problems.put("4.2", CheckingCyclicity.class );
     }
 
     private static void solve(String id) {
