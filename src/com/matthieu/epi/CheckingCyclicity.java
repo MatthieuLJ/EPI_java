@@ -15,6 +15,18 @@ public class CheckingCyclicity implements Solution {
         return false;
     }
 
+    public <T> boolean hasCycle2(LinkedList<T> list) {
+        LinkedList<T> slow=list, fast=list;
+        do {
+            slow = slow.next;
+            fast = fast.next;
+            if (fast != null)
+                fast = fast.next;
+        } while ((fast != slow) && (fast != null));
+
+        return (fast != null);
+    }
+
     private LinkedList<Integer> createLinkedList(int size) {
         LinkedList<Integer> res = null;
         LinkedList<Integer> tmp = null;
@@ -58,5 +70,9 @@ public class CheckingCyclicity implements Solution {
 
         System.out.println("First list "+(hasCycle(no_cycle)?"has":"does not have")+" a cycle");
         System.out.println("Second list "+(hasCycle(with_cycle)?"has":"does not have")+" a cycle");
+
+        System.out.println("First list "+(hasCycle2(no_cycle)?"has":"does not have")+" a cycle");
+        System.out.println("Second list "+(hasCycle2(with_cycle)?"has":"does not have")+" a cycle");
+
     }
 }
