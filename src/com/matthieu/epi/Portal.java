@@ -27,6 +27,7 @@ public class Portal {
         problems.put("4.5", OverlappingLists2.class );
         problems.put("4.6", EvenOddMerge.class );
         problems.put("4.9", ReverseLinkedList.class );
+        problems.put("5.1", StackMax.class );
         problems.put("12.3", NearestPoints.class );
     }
 
