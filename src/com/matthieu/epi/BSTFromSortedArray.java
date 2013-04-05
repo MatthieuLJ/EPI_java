@@ -1,10 +1,9 @@
 package com.matthieu.epi;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class BSTFromSortedArray implements Solution {
-    public <T extends Comparable<T>> BinaryTree<T> buildFromArray(T t[]) {
+    public static <T extends Comparable<T>> BinaryTree<T> buildFromArray(T t[]) {
         if (t.length==0)
             return null;
 
@@ -15,7 +14,7 @@ public class BSTFromSortedArray implements Solution {
         }
         int mid_point = t.length/2;
         res.key=t[mid_point];
-        res.left = buildFromArray(Arrays.copyOfRange(t, 0, mid_point-1));
+        res.left = buildFromArray(Arrays.copyOfRange(t, 0, mid_point));
         res.right = buildFromArray(Arrays.copyOfRange(t, mid_point+1, t.length));
 
         return res;

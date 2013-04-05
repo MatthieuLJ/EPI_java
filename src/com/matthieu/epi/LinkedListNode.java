@@ -1,14 +1,14 @@
 package com.matthieu.epi;
 
-public class LinkedList<T> {
-    public LinkedList<T> next;
+public class LinkedListNode<T> {
+    public LinkedListNode<T> next;
     public T data;
 
     public String toString() {
         return data.toString()+(next!=null?" --> "+next.toString():"");
     }
 
-    static public <T> int getLinkListLength(LinkedList<T> list) {
+    static public <T> int getLinkListLength(LinkedListNode<T> list) {
         int res=0;
         while (list != null) {
             list = list.next;
@@ -18,19 +18,19 @@ public class LinkedList<T> {
     }
 
 
-    static public LinkedList<Integer> createLinkedList(int size) {
-        LinkedList<Integer> res = null;
-        LinkedList<Integer> tmp = null;
+    static public LinkedListNode<Integer> createLinkedList(int size) {
+        LinkedListNode<Integer> res = null;
+        LinkedListNode<Integer> tmp = null;
         int tmp_data=0;
 
         while(size > 0) {
             tmp_data = (int) (Math.random()*10);
             if (res == null) {
-                res = new LinkedList<Integer>();
+                res = new LinkedListNode<Integer>();
                 tmp = res;
             }
             else {
-                tmp.next = new LinkedList<Integer>();
+                tmp.next = new LinkedListNode<Integer>();
                 tmp = tmp.next;
             }
             tmp.data = tmp_data;
@@ -39,13 +39,13 @@ public class LinkedList<T> {
         return res;
     }
 
-    static public <T> LinkedList<T> addCycle(LinkedList<T> list, int at) {
-        LinkedList<T> tmp = list;
+    static public <T> LinkedListNode<T> addCycle(LinkedListNode<T> list, int at) {
+        LinkedListNode<T> tmp = list;
         while (at > 0) {
             tmp = tmp.next;
             at--;
         }
-        LinkedList<T> dest = tmp;
+        LinkedListNode<T> dest = tmp;
         while (tmp.next != null) {
             tmp = tmp.next;
         }
@@ -54,8 +54,8 @@ public class LinkedList<T> {
         return list;
     }
 
-    static public <T> LinkedList<T> concatenate(LinkedList<T> start, LinkedList<T> end) {
-        LinkedList<T> tmp = start;
+    static public <T> LinkedListNode<T> concatenate(LinkedListNode<T> start, LinkedListNode<T> end) {
+        LinkedListNode<T> tmp = start;
         if (tmp == null)
             return end;
         while(tmp.next != null) {

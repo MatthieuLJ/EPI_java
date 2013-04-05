@@ -1,14 +1,14 @@
 package com.matthieu.epi;
 
 public class EvenOddMerge implements Solution {
-    public <T> LinkedList<T> evenOddMerge(LinkedList<T> list) {
-        if (LinkedList.getLinkListLength(list)<=2)
+    public <T> LinkedListNode<T> evenOddMerge(LinkedListNode<T> list) {
+        if (LinkedListNode.getLinkListLength(list)<=2)
             return list;
-        LinkedList<T> evenStart = list;
-        LinkedList<T> oddStart = list.next;
+        LinkedListNode<T> evenStart = list;
+        LinkedListNode<T> oddStart = list.next;
 
-        LinkedList<T> tmp_even = evenStart;
-        LinkedList<T> tmp_odd = oddStart;
+        LinkedListNode<T> tmp_even = evenStart;
+        LinkedListNode<T> tmp_odd = oddStart;
 
         while (true) {
             if (tmp_odd.next != null) {
@@ -29,12 +29,12 @@ public class EvenOddMerge implements Solution {
             }
         }
 
-        return LinkedList.concatenate(evenStart,oddStart);
+        return LinkedListNode.concatenate(evenStart, oddStart);
     }
 
     @Override
     public void solveProblem() {
-        LinkedList<Integer> list = LinkedList.createLinkedList(20);
+        LinkedListNode<Integer> list = LinkedListNode.createLinkedList(20);
 
         System.out.println("Original list is "+list);
         System.out.println("After even-odd merge: "+evenOddMerge(list));

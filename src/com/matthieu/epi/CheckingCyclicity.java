@@ -4,8 +4,8 @@ import java.util.HashSet;
 
 public class CheckingCyclicity implements Solution {
 
-    static public <T> LinkedList<T> hasCycle(LinkedList<T> list) {
-        HashSet<LinkedList<T>> hash = new HashSet<LinkedList<T>>();
+    static public <T> LinkedListNode<T> hasCycle(LinkedListNode<T> list) {
+        HashSet<LinkedListNode<T>> hash = new HashSet<LinkedListNode<T>>();
         while (list != null) {
             if (hash.contains(list))
                 return list;
@@ -15,8 +15,8 @@ public class CheckingCyclicity implements Solution {
         return null;
     }
 
-    static public <T> LinkedList<T> hasCycle2(LinkedList<T> list) {
-        LinkedList<T> slow=list, fast=list;
+    static public <T> LinkedListNode<T> hasCycle2(LinkedListNode<T> list) {
+        LinkedListNode<T> slow=list, fast=list;
         do {
             slow = slow.next;
             fast = fast.next;
@@ -51,8 +51,8 @@ public class CheckingCyclicity implements Solution {
 
     @Override
     public void solveProblem() {
-        LinkedList<Integer> no_cycle = LinkedList.createLinkedList(15);
-        LinkedList<Integer> with_cycle = LinkedList.addCycle(LinkedList.createLinkedList(20), 10);
+        LinkedListNode<Integer> no_cycle = LinkedListNode.createLinkedList(15);
+        LinkedListNode<Integer> with_cycle = LinkedListNode.addCycle(LinkedListNode.createLinkedList(20), 10);
 
         System.out.println("First list "+(hasCycle(no_cycle)!=null?"has":"does not have")+" a cycle");
         System.out.println("Second list "+(hasCycle(with_cycle)!=null?"has":"does not have")+" a cycle");

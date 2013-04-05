@@ -2,12 +2,12 @@ package com.matthieu.epi;
 
 public class OverlappingLists1 implements Solution {
 
-    static public <T> LinkedList<T> findFirstCommonNode(LinkedList<T> a, LinkedList<T> b) {
-        int length_a = LinkedList.getLinkListLength(a);
-        int length_b = LinkedList.getLinkListLength(b);
+    static public <T> LinkedListNode<T> findFirstCommonNode(LinkedListNode<T> a, LinkedListNode<T> b) {
+        int length_a = LinkedListNode.getLinkListLength(a);
+        int length_b = LinkedListNode.getLinkListLength(b);
 
-        LinkedList<T> tmp_a = a;
-        LinkedList<T> tmp_b = b;
+        LinkedListNode<T> tmp_a = a;
+        LinkedListNode<T> tmp_b = b;
 
         if (length_a < length_b) {
             int diff = length_b - length_a;
@@ -33,12 +33,12 @@ public class OverlappingLists1 implements Solution {
 
     @Override
     public void solveProblem() {
-        LinkedList<Integer> a = LinkedList.createLinkedList(10);
-        LinkedList<Integer> b = LinkedList.createLinkedList(15);
+        LinkedListNode<Integer> a = LinkedListNode.createLinkedList(10);
+        LinkedListNode<Integer> b = LinkedListNode.createLinkedList(15);
         System.out.println("Lists a and b are "+(findFirstCommonNode(a,b)==null?"not joining":"joining"));
-        LinkedList<Integer> c = LinkedList.createLinkedList(5);
-        a = LinkedList.concatenate(a,c);
-        b = LinkedList.concatenate(b,c);
+        LinkedListNode<Integer> c = LinkedListNode.createLinkedList(5);
+        a = LinkedListNode.concatenate(a, c);
+        b = LinkedListNode.concatenate(b, c);
         System.out.println("After adding common tail, lists a and b are "+(findFirstCommonNode(a,b)==null?"not joining":"joining"));
     }
 }

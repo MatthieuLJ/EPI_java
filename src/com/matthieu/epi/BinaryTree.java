@@ -32,6 +32,6 @@ public class BinaryTree<T> {
 
     public String toString() {
         return key.toString() + (left!=null || right!=null ? " [":"") + (left!=null?left.toString():"") +
-                (left!=null && right!=null ? " : ":"") + (right!=null?right.toString():"") + (left!=null || right!=null ? " ]":"");
+                (left!=null || right!=null ? " : ":"") + (right!=null?right.toString():"") + (left!=null || right!=null ? " ]":"");
     }
 }
