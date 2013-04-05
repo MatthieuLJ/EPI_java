@@ -17,7 +17,7 @@ public class PrintingBST implements Solution {
                 if (t.left != null) stack.push(t.left);
             }
             else
-                System.out.println(element);
+                System.out.print(element+", ");
         }
 
     }
@@ -31,6 +31,7 @@ public class PrintingBST implements Solution {
         BinaryTree<Integer> tree = BSTFromSortedArray.buildFromArray(h);
         System.out.println("Printing tree "+tree);
         printBST(tree);
+        System.out.println();
 
     }
 }
