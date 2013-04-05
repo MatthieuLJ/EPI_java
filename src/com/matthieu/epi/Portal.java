@@ -17,6 +17,7 @@ public class Portal {
         problems.put("2.6", StringIntegerConversions.class );
         problems.put("3.1", DutchFlag.class );
         problems.put("3.3", MaxDifference.class);
+        problems.put("3.4", MaxDifferenceGeneralized.class);
         problems.put("3.9", BigIntegerMultiplication.class);
         problems.put("3.14", SudokuChecker.class );
         problems.put("3.22", PhoneNumberMnemonic.class );
