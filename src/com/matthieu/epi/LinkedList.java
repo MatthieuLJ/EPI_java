@@ -8,6 +8,16 @@ public class LinkedList<T> {
         return data.toString()+(next!=null?" --> "+next.toString():"");
     }
 
+    static public <T> int getLinkListLength(LinkedList<T> list) {
+        int res=0;
+        while (list != null) {
+            list = list.next;
+            res++;
+        }
+        return res;
+    }
+
+
     static public LinkedList<Integer> createLinkedList(int size) {
         LinkedList<Integer> res = null;
         LinkedList<Integer> tmp = null;
