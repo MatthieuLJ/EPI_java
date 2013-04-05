@@ -1,7 +1,7 @@
 package com.matthieu.epi;
 
 public class OverlappingLists1 implements Solution {
-    public <T> int getLinkListLength(LinkedList<T> list) {
+    static public <T> int getLinkListLength(LinkedList<T> list) {
         int res=0;
         while (list != null) {
             list = list.next;
@@ -10,7 +10,7 @@ public class OverlappingLists1 implements Solution {
         return res;
     }
 
-    public <T> LinkedList<T> findFirstCommonNode(LinkedList<T> a, LinkedList<T> b) {
+    static public <T> LinkedList<T> findFirstCommonNode(LinkedList<T> a, LinkedList<T> b) {
         int length_a = getLinkListLength(a);
         int length_b = getLinkListLength(b);
 

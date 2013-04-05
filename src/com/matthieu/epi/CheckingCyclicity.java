@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class CheckingCyclicity implements Solution {
 
-    public <T> LinkedList<T> hasCycle(LinkedList<T> list) {
+    static public <T> LinkedList<T> hasCycle(LinkedList<T> list) {
         HashSet<LinkedList<T>> hash = new HashSet<LinkedList<T>>();
         while (list != null) {
             if (hash.contains(list))
@@ -15,7 +15,7 @@ public class CheckingCyclicity implements Solution {
         return null;
     }
 
-    public <T> LinkedList<T> hasCycle2(LinkedList<T> list) {
+    static public <T> LinkedList<T> hasCycle2(LinkedList<T> list) {
         LinkedList<T> slow=list, fast=list;
         do {
             slow = slow.next;

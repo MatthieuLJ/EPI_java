@@ -23,6 +23,7 @@ public class Portal {
         problems.put("4.1", MergeSortedLinkedList.class );
         problems.put("4.2", CheckingCyclicity.class );
         problems.put("4.4", OverlappingLists1.class );
+        problems.put("4.5", OverlappingLists2.class );
     }
 
     private static void solve(String id) {
