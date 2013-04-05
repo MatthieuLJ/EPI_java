@@ -24,7 +24,7 @@ public class MaxDifferenceGeneralized implements Solution {
         for (int i=0; i<h.length; i++) {
             h[i] = (int) (Math.random()*30);
         }
-        
+
         System.out.println("Maximum pairs of differences "+ Arrays.toString(h)+" is "+ maxKPairDifferences(h, 3));
     }
 }
