@@ -24,7 +24,9 @@ public class CircularQueue implements Solution {
         }
 
         public int size() {
-            return (end-start) % array.length;
+            int res = (end-start) % array.length;
+            if (res < 0) res+=array.length;
+            return res;
         }
 
         public void push(T obj) {
@@ -53,12 +55,12 @@ public class CircularQueue implements Solution {
     public void solveProblem() {
         MyQueue<Integer> queue = new MyQueue<Integer>(3);
 
-        for (int i=0; i<5; i++) {
+        for (int i=0; i<4; i++) {
             int new_number = (int) (Math.random()*10);
             queue.push(new_number);
             System.out.println("pushed "+new_number+", state is "+queue);
         }
-        for (int i=0; i<8; i++) {
+        for (int i=0; i<10; i++) {
             if (Math.random() < 0.5) {
                 System.out.println("Polling "+queue.poll()+", state is "+queue);
             } else {
