@@ -32,6 +32,7 @@ public class Portal {
         problems.put("5.5", TowersOfHanoi.class );
         problems.put("5.5.1", TowersOfHanoiAlwaysUsingP3.class );
         problems.put("5.5.2", TowersOfHanoiToTheRight.class );
+        problems.put("5.9", PrintingBSTLevelOrder.class );
         problems.put("11.7", BSTFromSortedArray.class );
         problems.put("12.3", NearestPoints.class );
     }
