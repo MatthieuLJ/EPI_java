@@ -15,7 +15,9 @@ public class CircularQueue implements Solution {
         private void resize() {
             T new_array[] = (T[]) new Object[array.length*2];
             for (int i=start; i!=end; i = (i+1)%array.length) {
-                new_array[(i-start)%array.length] = array[i];
+                int index = (i-start)%array.length;
+                if (index < 0) index += array.length;
+                new_array[index] = array[i];
             }
             int current_size = size();
             array = new_array;
@@ -23,13 +25,13 @@ public class CircularQueue implements Solution {
             end=current_size;
         }
 
-        public int size() {
+        public synchronized int size() {
             int res = (end-start) % array.length;
             if (res < 0) res+=array.length;
             return res;
         }
 
-        public void push(T obj) {
+        public synchronized void push(T obj) {
             int new_end = (end+1) % array.length;
             if (new_end == start)
                 resize();
@@ -38,7 +40,7 @@ public class CircularQueue implements Solution {
             end = (end+1) % array.length;
         }
 
-        public T poll() {
+        public synchronized T poll() {
             if (size() == 0)
                 return null;
             T res = array[start];
