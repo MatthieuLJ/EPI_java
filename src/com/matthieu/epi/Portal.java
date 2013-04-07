@@ -36,6 +36,7 @@ public class Portal {
         problems.put("5.10", CircularQueue.class );
         problems.put("5.12", QueueWithTwoStacks.class);
         problems.put("6.5", InOrderO1.class);
+        problems.put("6.7", TreeReconstructionFromTransversalData.class );
         problems.put("11.7", BSTFromSortedArray.class );
         problems.put("12.3", NearestPoints.class );
     }
