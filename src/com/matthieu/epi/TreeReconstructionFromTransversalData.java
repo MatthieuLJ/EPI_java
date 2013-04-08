@@ -58,7 +58,6 @@ public class TreeReconstructionFromTransversalData implements Solution {
 
     @Override
     public void solveProblem() {
-
         BinaryTree<Integer> tree;
         LinkedList<Integer> inOrder = new LinkedList<Integer>();
         LinkedList<Integer> preOrder = new LinkedList<Integer>();

@@ -38,6 +38,7 @@ public class Portal {
         problems.put("6.2", KBalancedNodes.class);
         problems.put("6.5", InOrderO1.class);
         problems.put("6.7", TreeReconstructionFromTransversalData.class );
+        problems.put("6.8", TreeReconstructionFromTransversalWithMarker.class );
         problems.put("6.12", LCAWithParentField.class );
         problems.put("6.13", LCAWithParentFieldFaster.class );
         problems.put("11.7", BSTFromSortedArray.class );
