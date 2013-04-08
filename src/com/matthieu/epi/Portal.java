@@ -41,6 +41,7 @@ public class Portal {
         problems.put("6.8", TreeReconstructionFromTransversalWithMarker.class );
         problems.put("6.12", LCAWithParentField.class );
         problems.put("6.13", LCAWithParentFieldFaster.class );
+        problems.put("7.1", MergingSortedFiles.class );
         problems.put("11.7", BSTFromSortedArray.class );
         problems.put("12.3", NearestPoints.class );
     }
