@@ -71,7 +71,6 @@ public class MergingSortedFiles implements Solution {
         List<T> res = new ArrayList<T>();
         @SuppressWarnings("unchecked") Iterator<T> iterator[] = (Iterator<T>[]) Array.newInstance(Iterator.class, inputs.length);
 
-
         for (int i=0; i<inputs.length; i++) {
             iterator[i] = inputs[i].iterator();
             T data = iterator[i].next();
@@ -84,8 +83,8 @@ public class MergingSortedFiles implements Solution {
             StoreData<T> next_in_line = heap.poll();
             res.add(next_in_line.data);
 
-            T data = iterator[next_in_line.file].next();
-            if (data != null) {
+            if (iterator[next_in_line.file].hasNext()) {
+                T data = iterator[next_in_line.file].next();
                 StoreData<T> to_store = new StoreData<T>();
                 to_store.data = data;
                 to_store.file = next_in_line.file;

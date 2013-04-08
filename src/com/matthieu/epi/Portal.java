@@ -42,6 +42,7 @@ public class Portal {
         problems.put("6.12", LCAWithParentField.class );
         problems.put("6.13", LCAWithParentFieldFaster.class );
         problems.put("7.1", MergingSortedFiles.class );
+        problems.put("7.2", KIncreasingDecreasingSort.class );
         problems.put("7.7", ApproximateSort.class );
         problems.put("7.9", OnlineMedian.class );
         problems.put("11.7", BSTFromSortedArray.class );
