@@ -5,6 +5,14 @@ public class BinaryTree<T> {
     public BinaryTree<T> right=null;
     public T key;
 
+    public BinaryTree () {}
+    public BinaryTree (T root) { this.key = root; }
+    public BinaryTree (T root, BinaryTree<T> left, BinaryTree<T> right) {
+        this.key = root;
+        this.left = left;
+        this.right = right;
+    }
+
     public boolean isLeaf() {
         return (left==null) && (right==null);
     }
