@@ -48,6 +48,8 @@ public class Portal {
         problems.put("7.9", OnlineMedian.class );
         problems.put("8.2", FirstElementLargerThanK.class );
         problems.put("8.3", SearchForAIeI.class );
+        problems.put("8.9", KLargest.class );
+        problems.put("8.12", MinMax.class );
         problems.put("11.7", BSTFromSortedArray.class );
         problems.put("12.3", NearestPoints.class );
     }
