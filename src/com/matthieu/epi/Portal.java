@@ -58,8 +58,10 @@ public class Portal {
         problems.put("10.10", RenderingCalendar.class );
         problems.put("10.12", PointsCoveringIntervals.class );
         problems.put("11.1", CheckBSTProperty.class );
+        problems.put("11.4", FirstOccurrenceInBST.class );
         problems.put("11.5", FirstKeyLargerInBST.class );
         problems.put("11.7", BSTFromSortedArray.class );
+        problems.put("11.12", TraversingOrdersInBST.class );
         problems.put("12.3", NearestPoints.class );
     }
 
