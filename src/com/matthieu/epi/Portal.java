@@ -58,6 +58,7 @@ public class Portal {
         problems.put("10.12", PointsCoveringIntervals.class );
         problems.put("11.7", BSTFromSortedArray.class );
         problems.put("12.3", NearestPoints.class );
+        problems.put("Affirm", HiveDistance.class );
     }
 
     private static void solve(String id) {
