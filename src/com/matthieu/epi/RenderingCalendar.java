@@ -50,7 +50,7 @@ public class RenderingCalendar implements Solution {
         }
         System.out.println("For intervals "+intervals+"\nMaximum simultaneous is "+findMaximumConcurrentEvent(intervals));
         intervals.clear();
-        
+
         intervals.add(new Interval(0,3));
         intervals.add(new Interval(1,2));
         intervals.add(new Interval(2,3));
