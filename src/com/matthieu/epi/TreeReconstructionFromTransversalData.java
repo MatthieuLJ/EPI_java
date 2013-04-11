@@ -22,7 +22,7 @@ public class TreeReconstructionFromTransversalData implements Solution {
         return res;
     }
 
-    private <T> void buildInOrderTransversal(BinaryTree<T> tree, Deque<T> output) {
+    public static <T> void buildInOrderTransversal(BinaryTree<T> tree, Deque<T> output) {
         if (tree==null)
             return;
         buildInOrderTransversal(tree.left, output);
@@ -30,7 +30,7 @@ public class TreeReconstructionFromTransversalData implements Solution {
         buildInOrderTransversal(tree.right, output);
     }
 
-    private <T> void buildPostOrderTransversal(BinaryTree<T> tree, Deque<T> output) {
+    public static <T> void buildPostOrderTransversal(BinaryTree<T> tree, Deque<T> output) {
         if (tree==null)
             return;
         buildPostOrderTransversal(tree.left, output);
@@ -38,7 +38,7 @@ public class TreeReconstructionFromTransversalData implements Solution {
         output.addLast(tree.key);
     }
 
-    private <T> void buildPreOrderTransversal(BinaryTree<T> tree, Deque<T> output) {
+    public static <T> void buildPreOrderTransversal(BinaryTree<T> tree, Deque<T> output) {
         if (tree==null)
             return;
         output.addLast(tree.key);
@@ -46,7 +46,7 @@ public class TreeReconstructionFromTransversalData implements Solution {
         buildPreOrderTransversal(tree.right, output);
     }
 
-    private <T> boolean checkForDups(List<T> list) {
+    public static <T> boolean checkForDups(List<T> list) {
         Set<T> all_values = new HashSet<T>();
         for (int i=0; i<list.size(); i++) {
             if (all_values.contains(list.get(i)))

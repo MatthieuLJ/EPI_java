@@ -6,18 +6,6 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class PointsCoveringIntervals implements Solution {
-    public static class Interval {
-        int start;
-        int end;
-        public Interval(int s, int e) {
-            start=s;
-            end=e;
-        }
-        public String toString() {
-            return "["+start+"-"+end+"]";
-        }
-    }
-
     public static class IntervalStartComparator implements Comparator<Interval> {
         @Override
         public int compare(Interval interval, Interval interval1) {

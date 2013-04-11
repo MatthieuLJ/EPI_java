@@ -55,9 +55,15 @@ public class Portal {
         problems.put("9.8", AnonymousLetter.class );
         problems.put("10.5", TwoArraysIntersection.class );
         problems.put("10.6", TeamPhotoDay.class );
+        problems.put("10.10", RenderingCalendar.class );
         problems.put("10.12", PointsCoveringIntervals.class );
+        problems.put("11.1", CheckBSTProperty.class );
+        problems.put("11.4", FirstOccurrenceInBST.class );
+        problems.put("11.5", FirstKeyLargerInBST.class );
         problems.put("11.7", BSTFromSortedArray.class );
+        problems.put("11.12", TraversingOrdersInBST.class );
         problems.put("12.3", NearestPoints.class );
+        problems.put("12.11", LevenshteinDistance.class );
         problems.put("Affirm", HiveDistance.class );
     }
 
