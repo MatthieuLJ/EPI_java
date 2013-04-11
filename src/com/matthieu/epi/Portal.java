@@ -63,6 +63,7 @@ public class Portal {
         problems.put("11.7", BSTFromSortedArray.class );
         problems.put("11.12", TraversingOrdersInBST.class );
         problems.put("12.3", NearestPoints.class );
+        problems.put("12.11", LevenshteinDistance.class );
     }
 
     private static void solve(String id) {
