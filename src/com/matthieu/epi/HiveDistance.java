@@ -112,8 +112,8 @@ public class HiveDistance implements Solution {
                 long distance = hexDistance(Long.valueOf(numbers[0].trim()), Long.valueOf(numbers[1].trim()));
                 if (distance != Long.valueOf(numbers[2].trim()))
                     System.out.println("Failed test for distance from "+Long.valueOf(numbers[0].trim())+" to "+Long.valueOf(numbers[1].trim()));
-                else
-                    System.out.println("Test OK from "+Long.valueOf(numbers[0].trim())+" to "+Long.valueOf(numbers[1].trim()));
+                //else
+                    //System.out.println("Test OK from "+Long.valueOf(numbers[0].trim())+" to "+Long.valueOf(numbers[1].trim()));
             }
         } catch (IOException x) {
             System.err.format("IOException: %s%n", x);
