@@ -18,6 +18,8 @@ public class BinaryTree<T> {
     }
 
     public static BinaryTree<Integer> buildRandomTree(int h) {
+        if (Math.random()>0.8)
+            return null;
         BinaryTree<Integer> node = new BinaryTree<Integer>();
         node.key = (int) (Math.random() * 50);
         if (h > 0) {
