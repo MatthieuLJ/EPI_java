@@ -43,8 +43,7 @@ public class KLargest implements Solution {
     public void solveProblem() {
         int length = 50;
         int h[] = new int[length];
-        h[0] =  (int) (Math.random()*300);
-        for (int i=1; i<h.length; i++) {
+        for (int i=0; i<h.length; i++) {
             h[i] = (int) (Math.random()*30);
         }
         System.out.println("Array is "+Arrays.toString(h));
