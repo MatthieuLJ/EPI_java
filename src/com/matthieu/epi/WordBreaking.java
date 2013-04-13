@@ -64,7 +64,6 @@ public class WordBreaking implements Solution {
 
         String test = "loremelitsitpurusestat";
 
-
         System.out.println("Testing "+test+" returns "+findConcatenatedWords(trie, test));
     }
 
