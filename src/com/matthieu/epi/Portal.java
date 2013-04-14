@@ -70,6 +70,7 @@ public class Portal {
         problems.put("12.22", TutorScheduling.class );
         problems.put("12.25", HuffmanCoding.class );
         problems.put("13.1", Maze.class );
+        problems.put("13.7", TeamPhotoDay2.class );
         problems.put("Affirm", HiveDistance.class );
     }
 

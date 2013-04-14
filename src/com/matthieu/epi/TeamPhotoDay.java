@@ -5,28 +5,24 @@ import java.util.Collections;
 import java.util.List;
 
 public class TeamPhotoDay implements Solution {
+    public static boolean firstIsSmallerTeam(List<Integer> team1, List<Integer> team2) {
+        for (int i=0; i<team1.size(); i++ ){
+            if (team1.get(i) >= team2.get(i))
+                return false;
+        }
+        return true;
+    }
+
     public static boolean canTakePhoto(List<Integer> team1, List<Integer> team2) {
         if (team1.size() != team2.size())
             return false;
         if (team1.size() == 0)
             return true;
 
-        List<Integer> smaller, larger;
         Collections.sort(team1);
         Collections.sort(team2);
-        if (team1.get(0) < team2.get(0)) {
-            smaller = team1;
-            larger  = team2;
-        } else {
-            smaller = team2;
-            larger  = team1;
-        }
 
-        for (int i=0; i<team1.size(); i++) {
-            if (smaller.get(i) > larger.get(i))
-                return false;
-        }
-        return true;
+        return firstIsSmallerTeam(team1,team2) || firstIsSmallerTeam(team2, team1);
     }
 
     @Override
