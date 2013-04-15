@@ -72,6 +72,7 @@ public class Portal {
         problems.put("12.25", HuffmanCoding.class );
         problems.put("13.1", Maze.class );
         problems.put("13.3", WiringPCB.class );
+        problems.put("13.6", TheoryOfEquality.class );
         problems.put("13.7", TeamPhotoDay2.class );
         problems.put("Affirm", HiveDistance.class );
     }

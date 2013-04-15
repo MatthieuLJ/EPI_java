@@ -1,15 +1,10 @@
 package com.matthieu.epi;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
 public class WiringPCB implements Solution {
-    public static class ColoredGraphVertex extends GraphVertex {
-        int color=-1;
-    }
-
     public static boolean canBeWired(List<ColoredGraphVertex> graph) {
         Deque<ColoredGraphVertex> queue = new ArrayDeque<ColoredGraphVertex>();
         ColoredGraphVertex firstVertex = graph.get(0);
