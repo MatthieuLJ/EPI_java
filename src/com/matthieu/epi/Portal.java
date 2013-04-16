@@ -74,6 +74,7 @@ public class Portal {
         problems.put("13.3", WiringPCB.class );
         problems.put("13.6", TheoryOfEquality.class );
         problems.put("13.7", TeamPhotoDay2.class );
+        problems.put("14.2", KnapSack.class );
         problems.put("Affirm", HiveDistance.class );
     }
 
