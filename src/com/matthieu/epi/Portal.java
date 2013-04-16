@@ -76,6 +76,7 @@ public class Portal {
         problems.put("13.7", TeamPhotoDay2.class );
         problems.put("14.2", KnapSack.class );
         problems.put("14.8", SudokuSolver.class );
+        problems.put("14.12", Collatz.class );
         problems.put("Affirm", HiveDistance.class );
     }
 
