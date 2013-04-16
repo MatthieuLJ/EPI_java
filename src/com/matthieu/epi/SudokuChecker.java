@@ -3,7 +3,7 @@ package com.matthieu.epi;
 import java.util.Arrays;
 
 public class SudokuChecker implements Solution {
-    private boolean checkTable(int[][] table) {
+    public static boolean checkTable(int[][] table) {
         bitArrayChecker checker = new bitArrayChecker();
 
         // check all rows
@@ -39,7 +39,7 @@ public class SudokuChecker implements Solution {
         return true;
     }
 
-    private class bitArrayChecker {
+    private static class bitArrayChecker {
         int bitField[] = new int[10];
         public void addDigit(int d) {
             if (d==0) return;
