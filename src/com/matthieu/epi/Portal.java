@@ -15,6 +15,7 @@ public class Portal {
         problems.put("2.5", PowerSet.class );
         problems.put("2.5.1", SubsetsOfSizeK.class );
         problems.put("2.6", StringIntegerConversions.class );
+        problems.put("2.7", ConvertBase.class );
         problems.put("3.1", DutchFlag.class );
         problems.put("3.3", MaxDifference.class);
         problems.put("3.4", MaxDifferenceGeneralized.class);

@@ -3,12 +3,12 @@ package com.matthieu.epi;
 public class BitReversal implements Solution {
     long known_reversed[] = null;
 
-    public BitReversal() {
+    {{
         known_reversed = new long[0x10000];
         for (int i=0; i<=0xffff; i++) {
             known_reversed[i] = reverse16(i);
         }
-    }
+    }}
 
     private int reverse16(int input) {
         int res=0;

@@ -34,6 +34,7 @@ public class ComputeXPowerN implements Solution {
                         merge.addAll(Xi_j);
                         merge.add(i);
                         merge.add(j);
+                        merge.remove(1);
                         if ((cache.get(i)!=null) && (cache.get(i).size() > 0) && (cache.get(i).get(0).size() < merge.size())) {
                             // we already have a better way
                             continue;
@@ -45,7 +46,7 @@ public class ComputeXPowerN implements Solution {
                         if (cache.get(i) == null) {
                             cache.put(i, new ArrayList<HashSet<Integer>>());
                         }
-                        
+
                         // make sure we're not adding the same set several times
                         boolean already_exists=false;
                         for (HashSet<Integer> existing : cache.get(i)) {
