@@ -21,6 +21,7 @@ public class Portal {
         problems.put("2.10", GreatestCommonDivisor.class );
         problems.put("2.11", EnumeratingPrimes.class );
         problems.put("2.12", IntersectingRectangles.class );
+        problems.put("2.12.1", CheckAlignedRectangle.class );
         problems.put("3.1", DutchFlag.class );
         problems.put("3.3", MaxDifference.class);
         problems.put("3.4", MaxDifferenceGeneralized.class);
