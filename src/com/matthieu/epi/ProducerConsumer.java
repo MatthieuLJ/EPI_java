@@ -30,7 +30,8 @@ public class ProducerConsumer implements Solution {
                     if (array.size() >= MAX_SIZE) {
                         System.out.println("Array full");
                         try {
-                            queueNotFull.await();
+                            while(array.size() >= MAX_SIZE)
+                                queueNotFull.await();
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -62,7 +63,8 @@ public class ProducerConsumer implements Solution {
                     if (array.size() == 0) {
                         System.out.println("Array empty");
                         try {
-                            queueNotEmpty.await();
+                            while (array.size()==0)
+                                queueNotEmpty.await();
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
