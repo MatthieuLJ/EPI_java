@@ -3,19 +3,6 @@ package com.matthieu.epi;
 import java.util.Arrays;
 
 public class CheckAlignedRectangle implements Solution {
-    public static class Point {
-        int x;
-        int y;
-        public Point(int x, int y) {
-            this.x=x;
-            this.y=y;
-        }
-        @Override
-        public String toString() {
-            return "("+x+","+y+")";
-        }
-    }
-
     public static boolean isAlignedRectangle(Point[] p) {
         int minX=Integer.MAX_VALUE;
         int maxX=Integer.MIN_VALUE;
