@@ -29,11 +29,22 @@ public class ComputeXPowerN implements Solution {
                 // we want to build the possibilities to build X^i based on X^j x X^(i-j)
                 for (HashSet<Integer> Xj : cache.get(j)) {
                     for (HashSet<Integer> Xi_j : cache.get(i-j)) {
+                        if ((cache.get(i)!=null) && (cache.get(i).size() > 0) && (cache.get(i).get(0).size() < Xj.size())) {
+                            // computing X^j is already more expensive than what we already have
+                            continue;
+                        }
+                        if ((cache.get(i)!=null) && (cache.get(i).size() > 0) && (cache.get(i).get(0).size() < Xi_j.size())) {
+                            // computing X^(i-j) is already more expensive than what we already have
+                            continue;
+                        }
+
+                        // merge the set to build X^j and X^(i-j)
                         HashSet<Integer> merge = new HashSet<Integer>();
                         merge.addAll(Xj);
                         merge.addAll(Xi_j);
                         merge.add(i);
                         merge.add(j);
+                        // do not count 1 so the number of elements will really be the number of operations
                         merge.remove(1);
                         if ((cache.get(i)!=null) && (cache.get(i).size() > 0) && (cache.get(i).get(0).size() < merge.size())) {
                             // we already have a better way
