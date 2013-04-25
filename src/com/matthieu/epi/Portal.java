@@ -59,6 +59,7 @@ public class Portal {
         problems.put("8.1", FirstOccurence.class );
         problems.put("8.2", FirstElementLargerThanK.class );
         problems.put("8.3", SearchForAIeI.class );
+        problems.put("8.7", CompletionSearch.class );
         problems.put("8.8", KthElement2Lists.class );
         problems.put("8.9", SquareRoot.class );
         problems.put("8.12", MinMax.class );
