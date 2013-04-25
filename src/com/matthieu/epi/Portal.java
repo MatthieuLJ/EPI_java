@@ -68,6 +68,7 @@ public class Portal {
         problems.put("10.6", TeamPhotoDay.class );
         problems.put("10.7", CharacterOccurrences.class );
         problems.put("10.8", RemoveDuplicates.class );
+        problems.put("10.9", TaskAssignment.class );
         problems.put("10.10", RenderingCalendar.class );
         problems.put("10.12", PointsCoveringIntervals.class );
         problems.put("11.1", CheckBSTProperty.class );
