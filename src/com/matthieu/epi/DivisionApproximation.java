@@ -3,8 +3,13 @@ package com.matthieu.epi;
 public class DivisionApproximation implements Solution {
     public float approximateDivision(float x, float y, float epsilon) {
         float min=0;
+
         float max=x;
-        while (max*y < x) max*=10; // in case y<1
+        while (max*y < x) {
+             // in case y<1
+            min=max;
+            max*=10;
+        }
 
         float mid =0;
         while (Math.abs(mid*y-x) > epsilon) {

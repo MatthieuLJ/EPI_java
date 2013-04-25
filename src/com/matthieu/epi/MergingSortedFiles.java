@@ -29,7 +29,7 @@ public class MergingSortedFiles implements Solution {
                 last_date += Math.random()*20;
                 FileData res = new FileData();
                 res.time = last_date;
-                res.data = Long.toString(res.time) + " : " + Integer.toString(file)+"\n";
+                res.data = Long.toString(res.time) + " : " + Integer.toString(file);
                 return res;
             }
 

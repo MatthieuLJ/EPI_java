@@ -12,8 +12,8 @@ public class MaxDifferenceGeneralized implements Solution {
                 int diff = sign * list[i] + (j==0?0:pre_k_sum[j-1]);
                 k_sum[j] = Math.max(diff, pre_k_sum[j]);
             }
-            System.out.println("i="+i);
-            System.out.println("k_sum: "+Arrays.toString(k_sum));
+            //System.out.println("i="+i);
+            //System.out.println("k_sum: "+Arrays.toString(k_sum));
         }
 
         return k_sum[k*2 - 1];
