@@ -62,6 +62,7 @@ public class Portal {
         problems.put("8.7", CompletionSearch.class );
         problems.put("8.8", KthElement2Lists.class );
         problems.put("8.9", SquareRoot.class );
+        problems.put("8.9", DivisionApproximation.class );
         problems.put("8.12", MinMax.class );
         problems.put("8.13", KLargest.class );
         problems.put("9.8", AnonymousLetter.class );
