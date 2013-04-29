@@ -100,6 +100,7 @@ public class Portal {
         problems.put("Affirm", HiveDistance.class );
         problems.put("Combinations", EnumerateCombinations.class );
         problems.put("Permutations", EnumeratePermutations.class );
+        problems.put("ReachSum", ReachSum.class );
     }
 
     private static void solve(String id) {
