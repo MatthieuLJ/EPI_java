@@ -98,6 +98,8 @@ public class Portal {
         problems.put("15.6", ReadersWriters.class );
         problems.put("15.8", ProducerConsumer.class );
         problems.put("Affirm", HiveDistance.class );
+        problems.put("Combinations", EnumerateCombinations.class );
+        problems.put("Permutations", EnumeratePermutations.class );
     }
 
     private static void solve(String id) {
