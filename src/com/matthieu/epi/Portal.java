@@ -81,6 +81,7 @@ public class Portal {
         problems.put("12,2", CountingInversions.class );
         problems.put("12.3", NearestPoints.class );
         problems.put("12.4", TreeDiameter.class );
+        problems.put("12.6", LongestNonDecreasing.class );
         problems.put("12.11", LevenshteinDistance.class );
         problems.put("12.12", WordBreaking.class );
         problems.put("12.22", TutorScheduling.class );
