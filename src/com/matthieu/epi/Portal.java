@@ -83,6 +83,7 @@ public class Portal {
         problems.put("12.4", TreeDiameter.class );
         problems.put("12.6", LongestNonDecreasing.class );
         problems.put("12.6.1", LongestAlternating.class );
+        problems.put("12.6.3", LongestConvex.class );
         problems.put("12.11", LevenshteinDistance.class );
         problems.put("12.12", WordBreaking.class );
         problems.put("12.22", TutorScheduling.class );
