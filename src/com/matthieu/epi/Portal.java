@@ -110,6 +110,7 @@ public class Portal {
         problems.put("Permutations", EnumeratePermutations.class );
         problems.put("ReachSum", ReachSum.class );
         problems.put("Parenthesis", Parenthesis.class);
+        problems.put("Flatten2DList", Flatten2DList.class );
     }
 
     private static void solve(String id) {
