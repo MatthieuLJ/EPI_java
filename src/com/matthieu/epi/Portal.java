@@ -106,6 +106,7 @@ public class Portal {
         problems.put("Combinations", EnumerateCombinations.class );
         problems.put("Permutations", EnumeratePermutations.class );
         problems.put("ReachSum", ReachSum.class );
+        problems.put("Parenthesis", Parenthesis.class);
     }
 
     private static void solve(String id) {
