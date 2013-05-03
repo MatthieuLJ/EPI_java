@@ -78,6 +78,8 @@ public class Portal {
         problems.put("11.5", FirstKeyLargerInBST.class );
         problems.put("11.7", BSTFromSortedArray.class );
         problems.put("11.12", TraversingOrdersInBST.class );
+        problems.put("12.1", Skyline.class );
+        problems.put("12.1.1", PyramidSkyline.class );
         problems.put("12,2", CountingInversions.class );
         problems.put("12.3", NearestPoints.class );
         problems.put("12.4", TreeDiameter.class );
