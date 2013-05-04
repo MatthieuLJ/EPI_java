@@ -31,6 +31,30 @@ public class CheckBSTProperty implements Solution {
         return true;
     }
 
+    private static class walkReturn<T> {
+        Boolean b;
+        T max;
+        walkReturn(boolean b, T max) {
+            this.b=b;
+            this.max=max;
+        }
+    }
+    private static <T extends Comparable<T>> walkReturn<T> checkBSTWalkHelper(BinaryTree<T> tree, T min) {
+        if (tree == null) {
+            return new walkReturn<T>(true, min);
+        }
+        walkReturn<T> leftReturn = checkBSTWalkHelper(tree.left, min);
+        if (!leftReturn.b)
+            return leftReturn;
+        if ((leftReturn.max!=null) && (tree.key.compareTo(leftReturn.max)<0))
+            return new walkReturn<T>(false, leftReturn.max);
+        return checkBSTWalkHelper(tree.right, tree.key);
+    }
+
+    public static <T extends Comparable<T>> boolean checkBSTWalk(BinaryTree<T> tree) {
+        return checkBSTWalkHelper(tree, null).b;
+    }
+
     @Override
     public void solveProblem() {
         Integer h[] = new Integer[20];
@@ -38,9 +62,11 @@ public class CheckBSTProperty implements Solution {
             h[i] = (int) (Math.random()*30);
         }
         BinaryTree<Integer> tree = BSTFromSortedArray.buildFromArray(h);
-        System.out.println("checking tree "+tree+" return "+checkBST(tree, new MinMax<Integer>()));
+        //System.out.println("checking tree "+tree+" return "+checkBST(tree, new MinMax<Integer>()));
+        //System.out.println("checking tree by walking "+tree+" return "+checkBSTWalk(tree));
         Arrays.sort(h);
         tree = BSTFromSortedArray.buildFromArray(h);
         System.out.println("checking tree "+tree+" return "+checkBST(tree, new MinMax<Integer>()));
+        System.out.println("checking tree by walking "+tree+" return "+checkBSTWalk(tree));
     }
 }
