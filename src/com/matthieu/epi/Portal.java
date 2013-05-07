@@ -105,6 +105,7 @@ public class Portal {
         problems.put("14.10", ComputeXPowerN.class );
         problems.put("14.12", Collatz.class );
         problems.put("15.3", Requester.class );
+        problems.put("15.5", ReadersWriters1.class );
         problems.put("15.6", ReadersWriters.class );
         problems.put("15.8", ProducerConsumer.class );
         problems.put("Affirm", HiveDistance.class );
