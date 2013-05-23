@@ -6,7 +6,7 @@ public class SquareRoot implements Solution {
         float res=0;
 
         while (r-l > 0.0001) {
-            res = l+(r-l)/2;
+            res = l+((r-l)/2);
             if (res*res > x) r=res;
             else if (res*res < x) l=res;
             else return res;
