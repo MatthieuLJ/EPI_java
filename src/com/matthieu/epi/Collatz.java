@@ -19,7 +19,7 @@ public class Collatz implements Solution {
             Collections.sort(keys);
             for (long k : keys) {
                 if (k==minOK+2) {
-                    minOK+=2;
+                    minOK+=2;   // this way of increasing minOK may not be sufficient...
                     checked.remove(k);
                     continue;
                 }

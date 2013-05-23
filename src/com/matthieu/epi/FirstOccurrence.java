@@ -2,8 +2,8 @@ package com.matthieu.epi;
 
 import java.util.Arrays;
 
-public class FirstOccurence implements Solution {
-    public static int firstOccurenceOfK(int []array, int k) {
+public class FirstOccurrence implements Solution {
+    public static int firstOccurrenceOfK(int[] array, int k) {
         int l=0, r=array.length-1;
         int mid=0;
         while (l<r) {
@@ -27,6 +27,6 @@ public class FirstOccurence implements Solution {
         }
         Arrays.sort(h);
         int random_index = (int) (Math.random()*50);
-        System.out.println("Find first occurence of "+h[random_index]+" at "+firstOccurenceOfK(h, h[random_index])+" in array "+Arrays.toString(h));
+        System.out.println("Find first occurence of "+h[random_index]+" at "+ firstOccurrenceOfK(h, h[random_index])+" in array "+Arrays.toString(h));
     }
 }

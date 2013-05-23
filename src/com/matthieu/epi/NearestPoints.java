@@ -1,7 +1,5 @@
 package com.matthieu.epi;
 
-import com.sun.servicetag.SystemEnvironment;
-
 import java.util.*;
 
 public class NearestPoints implements Solution {

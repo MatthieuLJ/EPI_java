@@ -13,8 +13,8 @@ public class HuffmanCoding implements Solution {
             res.put(tree.key, prefix);
             return;
         }
-        assignSolution(tree.left, res, prefix+"0");
-        assignSolution(tree.right,res,prefix+"1");
+        assignSolution(tree.left , res, prefix+"0");
+        assignSolution(tree.right, res, prefix+"1");
     }
 
     public static Map<String,String> huffmanCoding(final Map<String, Float> frequencies) {
@@ -38,7 +38,6 @@ public class HuffmanCoding implements Solution {
         }
 
         while (nodeQ.size()>1) {
-
             BinaryTree<String> lowest_node1 = nodeQ.poll();
             BinaryTree<String> lowest_node2 = nodeQ.poll();
             BinaryTree<String> new_node = new BinaryTree<String>(lowest_node1.key+lowest_node2.key, lowest_node1, lowest_node2);

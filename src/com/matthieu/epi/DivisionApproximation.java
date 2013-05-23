@@ -13,7 +13,7 @@ public class DivisionApproximation implements Solution {
 
         float mid =0;
         while (Math.abs(mid*y-x) > epsilon) {
-            mid= min+(max-min)/2;
+            mid= (float) ((min+(max-min))*0.5);
             if (mid*y>x) {
                 max=mid;
             } else {
